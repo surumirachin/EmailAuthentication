@@ -1,0 +1,21 @@
+<table>
+<thead>
+<tr>
+ <th>Title</th>
+ <th>Description</th>
+ <th>Attachments</th>
+ </tr>
+ </thead>
+ <tbody>
+{% for item in list %}
+<tr>
+ <td>{{ item.title}}</td>
+ <td>{{item.description}}</td>
+ <td>{{item.date}}</td>
+ <td><img src="{{item.attachment.url}}"></td>
+ </tr>
+ {% endfor %}
+
+</tbody>
+</table>
+

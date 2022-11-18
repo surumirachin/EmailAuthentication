@@ -1,0 +1,27 @@
+<h2>Homepage</h2>
+
+<p>Welcome,
+
+  {% if user.is_authenticated %}
+
+  {{ user.username }}
+
+  {% else %}
+
+  visitor
+
+  {% endif %}!
+
+</p>
+
+<p>
+
+  <strong>Total users registered: </strong> {{ count }}
+
+</p>
+<p>
+  come login and see latest post!!
+</p>
+<button type="submit"><a href="{% url 'login' %}" ><b>Login</b></a></button><br>
+<p>Not a member. come join us! </p>
+  <button type="submit" ><a href="{% url 'register' %}" ><b>SIGNUP</b></a></button>
